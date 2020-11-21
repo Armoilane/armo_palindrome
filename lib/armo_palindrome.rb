@@ -1,4 +1,4 @@
-require "armo_palindrome/version"
+# require "./armo_palindrome/version"
 
 class String
 
