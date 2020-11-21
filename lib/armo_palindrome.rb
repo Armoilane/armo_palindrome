@@ -1,4 +1,4 @@
-# require "./armo_palindrome/version"
+require "armo_palindrome/version"
 
 class String
 
@@ -7,22 +7,11 @@ class String
     processed_content == processed_content.reverse
   end
 
-  # Returns only the letters in the string.
-  def letters
-    the_letters = []
-    for i in 0..self.length - 1
-      if (self[i].match(/[a-zA-Z]/))
-        the_letters << self[i]
-      end
-    end
-    the_letters.join
-  end
-
   private
 
     # Returns content for palindrome testing.
     def processed_content
-      self.letters.downcase
+      scan(/[a-z]/i).join.downcase
     end
 
 end
