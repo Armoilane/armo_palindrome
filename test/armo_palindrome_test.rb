@@ -26,4 +26,8 @@ class ArmoPalindromeTest < Minitest::Test
     assert 12321.palindrome?
   end
 
+  def test_spaces
+    refute " ".palindrome?
+  end
+
 end
